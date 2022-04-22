@@ -18,8 +18,8 @@ public class ConexionMySQL {
     
     Connection conectar = null;
     private final String ruta ="jdbc:mysql://localhost/prn215_grupo_1_2";
-    private final String usuario= "root";
-    private final String password= "root";
+    private final String usuarioC= "root";
+    private final String passwordC= "root";
     
     
     /**
@@ -30,7 +30,7 @@ public class ConexionMySQL {
     {
         try{
            Class.forName("com.mysql.jbdc.Driver");
-           conectar = (Connection) DriverManager.getConnection(ruta, usuario, password);
+           conectar = (Connection) DriverManager.getConnection(ruta, usuarioC, passwordC);
             
         }catch(ClassNotFoundException | SQLException error)
         {

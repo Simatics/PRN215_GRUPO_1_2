@@ -1,4 +1,4 @@
-
+import Formularios.*;
 
 /**
  *@author Pedro Ernesto Alfaro Laínez
@@ -10,9 +10,9 @@ public class Main_Class {
      */
     public static void main(String[] args) {
     
-   
-       
-        
+    FormSign cuenta= new FormSign();
+     cuenta.setVisible(true);
+     
         
     }
     

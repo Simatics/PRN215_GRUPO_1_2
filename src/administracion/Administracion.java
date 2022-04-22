@@ -3,22 +3,29 @@
  * historial de facturacion.
  */
 package administracion;
+import personas.Persona;
 
 /**
  *
  * @author Pedro Ernesto Alfaro Laínez
  * @since 15/04/22
  */
-public class Administracion {
-    
+public class Administracion extends Persona {
+    // Constructor de la clase Administrasion 
     public  Administracion ()
     {
     }
-
-    private void generarCuadre()
+    
+    /**
+     * Este metodo se encarga de realizar el cuadra de caja diario
+     */
+    private void cuadreDiario()
     {
     }
     
+    /**
+     * Este metodo se encargara de genarar el historial de ventas
+     */
     private void genHistoFacturacion()
     {
     }
