@@ -1,5 +1,5 @@
 
-package Formularios;
+package facturacion;
 
 
 
@@ -80,9 +80,11 @@ public class FormPrin extends javax.swing.JFrame {
 
         btnChili.setBackground(new java.awt.Color(255, 255, 255));
         btnChili.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnChili.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/chili.jpg"))); // NOI18N
 
         btnAmburguesa.setBackground(new java.awt.Color(255, 255, 255));
         btnAmburguesa.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnAmburguesa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/amburguesa.png"))); // NOI18N
         btnAmburguesa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAmburguesaActionPerformed(evt);
@@ -91,15 +93,19 @@ public class FormPrin extends javax.swing.JFrame {
 
         btnPizza.setBackground(new java.awt.Color(255, 255, 255));
         btnPizza.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnPizza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pizza.jpg"))); // NOI18N
 
         btnNachos.setBackground(new java.awt.Color(255, 255, 255));
         btnNachos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnNachos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/nachos.jpg"))); // NOI18N
 
         btnHotDog.setBackground(new java.awt.Color(255, 255, 255));
         btnHotDog.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnHotDog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/hotdog.jpg"))); // NOI18N
 
         btnTacos.setBackground(new java.awt.Color(255, 255, 255));
         btnTacos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnTacos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/tacos.png"))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setText("Amburguesa $ 6.50");
@@ -198,8 +204,8 @@ public class FormPrin extends javax.swing.JFrame {
                 .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnBaseLayout.createSequentialGroup()
                         .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnAmburguesa, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-                            .addComponent(btnChili, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
+                            .addComponent(btnAmburguesa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnChili, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)

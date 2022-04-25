@@ -30,18 +30,6 @@ public class Administracion extends Persona {
     {
     }
     
-    // Este metodo se utiliza para evaluar si una entrada es numerica 
-    public boolean isNumeric(String Cadena)
-    {
-        try {
-            Integer.parseInt(Cadena);
-            return true;
-        
-        }catch(NumberFormatException Error)
-        {
-            return false;
-        }
-    
-    }
+
     
 }

@@ -16,7 +16,7 @@ public class SignIn {
     
     private String user;
     private String password;
-    private final String codAdmin = "AL19002";
+    private final String codAdmin = "01840297";
     
      /**
       * Este metodo se implementa para hacer la funcionalidad de crear un nuevo usuario
