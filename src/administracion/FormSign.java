@@ -1,5 +1,5 @@
 
-package Formularios;
+package administracion;
 
 
 /**
@@ -29,8 +29,8 @@ public class FormSign extends javax.swing.JFrame {
         txtContraseña = new javax.swing.JPasswordField();
         btnIngresar = new javax.swing.JButton();
         lblNuevoUsuario1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnCrearUsuario = new javax.swing.JButton();
+        btnRContra = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Restaurante Gordo´s");
@@ -60,20 +60,20 @@ public class FormSign extends javax.swing.JFrame {
         lblNuevoUsuario1.setFont(new java.awt.Font("Calibri Light", 1, 36)); // NOI18N
         lblNuevoUsuario1.setText("Bienvenido");
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 102));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Crear usuario");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnCrearUsuario.setBackground(new java.awt.Color(0, 102, 102));
+        btnCrearUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        btnCrearUsuario.setText("Crear usuario");
+        btnCrearUsuario.setBorder(null);
+        btnCrearUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnCrearUsuarioActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 102, 102));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("¿Perdiste la contraseña ?");
-        jButton2.setBorder(null);
+        btnRContra.setBackground(new java.awt.Color(0, 102, 102));
+        btnRContra.setForeground(new java.awt.Color(255, 255, 255));
+        btnRContra.setText("¿Perdiste la contraseña ?");
+        btnRContra.setBorder(null);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -91,12 +91,12 @@ public class FormSign extends javax.swing.JFrame {
                             .addComponent(txtContraseña, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
                             .addComponent(btnIngresar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnRContra, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(68, 68, 68)))))
                 .addContainerGap(32, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnCrearUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(136, 136, 136))
         );
         jPanel2Layout.setVerticalGroup(
@@ -111,9 +111,9 @@ public class FormSign extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btnCrearUsuario)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(btnRContra)
                 .addContainerGap(43, Short.MAX_VALUE))
         );
 
@@ -131,17 +131,18 @@ public class FormSign extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnCrearUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearUsuarioActionPerformed
         RegistroUsuario user = new RegistroUsuario();
         user.setVisible(true);
+        this.setVisible(false);
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnCrearUsuarioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCrearUsuario;
     private javax.swing.JButton btnIngresar;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnRContra;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblNuevoUsuario1;
     private javax.swing.JPasswordField txtContraseña;

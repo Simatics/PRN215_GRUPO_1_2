@@ -1,4 +1,5 @@
-import Formularios.*;
+import administracion.*;
+import javax.swing.JOptionPane;
 
 /**
  *@author Pedro Ernesto Alfaro Laínez
@@ -10,10 +11,9 @@ public class Main_Class {
      */
     public static void main(String[] args) {
     
-//    FormSign cuenta= new FormSign();
-//     cuenta.setVisible(true);
-     FormPrin orden = new FormPrin ();
-     orden.setVisible(true);
+      FormSign cuenta= new FormSign();
+      cuenta.setVisible(true);
+
         
     }
     
