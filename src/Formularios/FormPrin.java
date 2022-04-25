@@ -1,19 +1,22 @@
 
 package Formularios;
 import java.awt.Color;
+import java.awt.Font;
 import javax.swing.*;
+
+
 
 /**
  *
  * @author Pedro Ernesto Alfaro Lainez
  */
 public class FormPrin extends javax.swing.JFrame {
+ 
 
-    /**
-     * Creates new form FormPrin
-     */
+       
     public FormPrin() {
         initComponents();
+
     }
 
     /**
@@ -26,7 +29,7 @@ public class FormPrin extends javax.swing.JFrame {
     private void initComponents() {
 
         pnTitulo = new javax.swing.JPanel();
-        lblTitulo = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         pnPedidos = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -34,44 +37,37 @@ public class FormPrin extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        pnOrden = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        pnOrden = new javax.swing.JPanel();
+        btnSallir = new javax.swing.JButton();
+        btnSallir1 = new javax.swing.JButton();
+        btnSallir2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gordo´s Restaurant");
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnTitulo.setBackground(new java.awt.Color(153, 153, 255));
         pnTitulo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
         pnTitulo.setName(""); // NOI18N
+        pnTitulo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblTitulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        lblTitulo.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setBackground(new java.awt.Color(204, 204, 255));
+        jLabel7.setFont(new java.awt.Font("Candara Light", 1, 24)); // NOI18N
+        jLabel7.setText("Menu del dia ");
+        jLabel7.setAlignmentY(0.0F);
+        pnTitulo.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1320, 84));
 
-        javax.swing.GroupLayout pnTituloLayout = new javax.swing.GroupLayout(pnTitulo);
-        pnTitulo.setLayout(pnTituloLayout);
-        pnTituloLayout.setHorizontalGroup(
-            pnTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnTituloLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 1148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
-        );
-        pnTituloLayout.setVerticalGroup(
-            pnTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnTituloLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
-        );
+        getContentPane().add(pnTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 1320, 84));
 
-        pnPedidos.setBackground(new java.awt.Color(0, 204, 204));
+        pnPedidos.setBackground(new java.awt.Color(0, 102, 102));
         pnPedidos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
 
         jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\reybi\\Downloads\\Proyecto_Desarrollo\\PRN215_GRUPO_1_2\\PRN215_GRUPO_1_2\\build\\classes\\imagenes proyecto\\nachos.jpg")); // NOI18N
@@ -97,106 +93,83 @@ public class FormPrin extends javax.swing.JFrame {
         jButton6.setIcon(new javax.swing.ImageIcon("C:\\Users\\reybi\\Downloads\\Proyecto_Desarrollo\\PRN215_GRUPO_1_2\\PRN215_GRUPO_1_2\\build\\classes\\imagenes proyecto\\hotdog.jpg")); // NOI18N
         jButton6.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 51, 255)));
 
-        pnOrden.setBackground(new java.awt.Color(255, 255, 255));
-        pnOrden.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
-
-        javax.swing.GroupLayout pnOrdenLayout = new javax.swing.GroupLayout(pnOrden);
-        pnOrden.setLayout(pnOrdenLayout);
-        pnOrdenLayout.setHorizontalGroup(
-            pnOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 708, Short.MAX_VALUE)
-        );
-        pnOrdenLayout.setVerticalGroup(
-            pnOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("$ 4.50");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("$ 6.50");
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("$ 3.50");
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("$ 6.50");
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("$ 7.00");
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("$ 7.00");
 
         javax.swing.GroupLayout pnPedidosLayout = new javax.swing.GroupLayout(pnPedidos);
         pnPedidos.setLayout(pnPedidosLayout);
         pnPedidosLayout.setHorizontalGroup(
             pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnPedidosLayout.createSequentialGroup()
+            .addGroup(pnPedidosLayout.createSequentialGroup()
                 .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnPedidosLayout.createSequentialGroup()
-                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnPedidosLayout.createSequentialGroup()
-                                .addGap(71, 71, 71)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnPedidosLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(97, 97, 97))
+                        .addGap(71, 71, 71)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnPedidosLayout.createSequentialGroup()
                         .addGap(133, 133, 133)
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(171, 171, 171))
+                        .addGap(206, 206, 206)
+                        .addComponent(jLabel1))
+                    .addGroup(pnPedidosLayout.createSequentialGroup()
+                        .addGap(71, 71, 71)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(66, 66, 66)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnPedidosLayout.createSequentialGroup()
                         .addGap(142, 142, 142)
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4)
-                        .addGap(165, 165, 165))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnPedidosLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5)
-                        .addGap(177, 177, 177)))
-                .addComponent(pnOrden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnPedidosLayout.createSequentialGroup()
-                    .addGap(152, 152, 152)
-                    .addComponent(jLabel6)
-                    .addContainerGap(1116, Short.MAX_VALUE)))
+                        .addGap(203, 203, 203)
+                        .addComponent(jLabel4))
+                    .addGroup(pnPedidosLayout.createSequentialGroup()
+                        .addGap(71, 71, 71)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(66, 66, 66)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnPedidosLayout.createSequentialGroup()
+                        .addGap(152, 152, 152)
+                        .addComponent(jLabel6)
+                        .addGap(181, 181, 181)
+                        .addComponent(jLabel5)))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         pnPedidosLayout.setVerticalGroup(
             pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnPedidosLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
-                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton4)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(pnPedidosLayout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(6, 6, 6)
                 .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(jLabel1))
                 .addGap(38, 38, 38)
-                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnPedidosLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
                 .addGap(35, 35, 35)
@@ -204,33 +177,45 @@ public class FormPrin extends javax.swing.JFrame {
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel5)
-                .addContainerGap(151, Short.MAX_VALUE))
-            .addComponent(pnOrden, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnPedidosLayout.createSequentialGroup()
-                    .addContainerGap(767, Short.MAX_VALUE)
-                    .addComponent(jLabel6)
-                    .addGap(141, 141, 141)))
+                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnPedidosLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel6))
+                    .addComponent(jLabel5))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnPedidos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pnTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(pnTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(pnPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(pnPedidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 76, -1, 840));
+
+        pnOrden.setBackground(new java.awt.Color(255, 255, 255));
+        pnOrden.setForeground(new java.awt.Color(204, 204, 204));
+        pnOrden.setAlignmentX(0.0F);
+        pnOrden.setAlignmentY(0.0F);
+        pnOrden.setLayout(new javax.swing.BoxLayout(pnOrden, javax.swing.BoxLayout.Y_AXIS));
+        getContentPane().add(pnOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 84, 744, 828));
+
+        btnSallir.setBackground(new java.awt.Color(51, 102, 255));
+        btnSallir.setFont(new java.awt.Font("Calibri Light", 1, 24)); // NOI18N
+        btnSallir.setText("Administrador");
+        btnSallir.setAlignmentY(0.0F);
+        getContentPane().add(btnSallir, new org.netbeans.lib.awtextra.AbsoluteConstraints(924, 912, 396, 72));
+
+        btnSallir1.setBackground(new java.awt.Color(204, 0, 0));
+        btnSallir1.setFont(new java.awt.Font("Calibri Light", 1, 36)); // NOI18N
+        btnSallir1.setText("Exit");
+        btnSallir1.setAlignmentY(0.0F);
+        btnSallir1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSallir1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSallir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 912, 588, 72));
+
+        btnSallir2.setBackground(new java.awt.Color(0, 204, 204));
+        btnSallir2.setFont(new java.awt.Font("Calibri Light", 1, 24)); // NOI18N
+        btnSallir2.setText("Ir a la orden");
+        btnSallir2.setAlignmentY(0.0F);
+        getContentPane().add(btnSallir2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 912, 348, 72));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -238,18 +223,41 @@ public class FormPrin extends javax.swing.JFrame {
     // Codigo para el boton amburguesa
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
-        JButton mas = new JButton();
-        mas.setBounds(10,10,10,10);
-        mas.setText("+");
+        // Camps de clase
+        int x=0;
+        int y=0;
+      
+        // Crea un cuadro de texto en el panel pnOrden
+        
+        // Crea un boton en el panel pnMas
+        Font tamañoLetra = new Font("calibri ligth", Font.BOLD,14);
+        JTextField mas = new JTextField();
+        mas.setBounds(x,y,744,100);
+        mas.setFont(tamañoLetra);
+        mas.setText("Amburguesa de 1/4 de libra $6.50 ");
         mas.setEnabled(true);
-        mas.setForeground(Color.LIGHT_GRAY);
+        mas.setForeground(Color.black);
         mas.setVisible(true);
-        add(mas);
+        pnOrden.add(mas);
+        pnOrden.updateUI();
+        x+=100;
+        y+=100;
+        pnOrden.add(mas);
+        pnOrden.updateUI();
+        
     }//GEN-LAST:event_jButton4ActionPerformed
+    
+    // Este codigo es para salir de la aplicasion 
+    private void btnSallir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSallir1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnSallir1ActionPerformed
 
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSallir;
+    private javax.swing.JButton btnSallir1;
+    private javax.swing.JButton btnSallir2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -262,7 +270,7 @@ public class FormPrin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel pnOrden;
     private javax.swing.JPanel pnPedidos;
     private javax.swing.JPanel pnTitulo;
