@@ -73,7 +73,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
         txtCodAdmin.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel6.setText("IDEVendedor");
+        jLabel6.setText("IDVendedor");
 
         btnCrear.setBackground(new java.awt.Color(102, 102, 255));
         btnCrear.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -200,6 +200,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
     
     //Codigo para el boton crear un nuevo usuario
     private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
+        // Este objeto se creo para cambiar el color de los indicadores de error asteriscos en el formulario
         Color verdeTurqueza= new Color(0,102,102);
      
         // Se evalua primero si los cuadros de texto estan vacios
@@ -208,7 +209,53 @@ public class RegistroUsuario extends javax.swing.JFrame {
             // Se evalua si la entrada contiene solo numeros
            if (isNumeric(txtNombre.getText())==false && isNumeric(txtIdVendedor.getText())==false && isNumeric(txtCodAdmin.getText())==true )
            {
+               String largo1 = txtNombre.getText();
+               String largo2 = txtIdVendedor.getText() ;
+               String largo3 = txtCodAdmin.getText(); 
                
+               // Se evalua que el usuario y contraseña tengan como minimo 8 caracteres
+               if (largo1.length()==8 && largo2.length()==8 && largo3.length()==8)
+               {
+                   int cAdmin;
+                   SignIn nuevoUsuario= new SignIn();
+                   nuevoUsuario.setUser(txtNombre.getText());
+                   nuevoUsuario.setPassword(txtIdVendedor.getText());
+                   cAdmin=Integer.parseInt(txtCodAdmin.getText());
+                   if(true)
+                   {
+                       nuevoUsuario.nuevoUsuario(largo3, largo3);
+                   }
+                   else
+                   {}
+                 
+               }
+               else
+               {
+                 if(largo1.length()<8)
+               {
+                   lblNombre.setForeground(Color.red);
+
+               }
+               else
+               {lblNombre.setForeground(verdeTurqueza);}
+               
+               if(largo2.length()<8)
+               {
+                   lblIdVendedor.setForeground(Color.red);
+
+               }
+               else
+               {lblIdVendedor.setForeground(verdeTurqueza);}
+               
+               
+               if(largo3.length()<8)
+               {
+                   lblCadmin.setForeground(Color.red);
+               }
+               else
+               {lblCadmin.setForeground(verdeTurqueza);}
+               JOptionPane.showMessageDialog(null, "- El Nombre, IDVendedor, Codigo admin deben tener como minimo 8 caracteres cada campo");
+               }
            
            }
            else
@@ -237,7 +284,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
                }
                else
                {lblCadmin.setForeground(verdeTurqueza);}
-               JOptionPane.showMessageDialog(null, "- EL nombre no debe de contener numeros \n - El id vendedor debe tener numeros y letras\n  -El codigo admin solo debe d econtener numeros ");
+               JOptionPane.showMessageDialog(null, "- EL Nombre no debe de contener numeros \n - El IDVendedor debe tener numeros y letras\n  -El Codigo admin solo debe d econtener numeros ");
            }
 
 

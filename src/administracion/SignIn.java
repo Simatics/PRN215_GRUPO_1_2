@@ -1,5 +1,10 @@
 
 package administracion;
+ import java.io.File;
+ import java.io.FileWriter;
+ import java.io.BufferedWriter;
+ import java.io.BufferedReader;
+
 
 /**
  *
@@ -16,7 +21,7 @@ public class SignIn {
     
     private String user;
     private String password;
-    private final String codAdmin = "01840297";
+    private final String codAdmin="";
     
      /**
       * Este metodo se implementa para hacer la funcionalidad de crear un nuevo usuario
