@@ -23,6 +23,7 @@ public class SignIn {
     private String password;
     private final String codAdmin="";
     
+    
      /**
       * Este metodo se implementa para hacer la funcionalidad de crear un nuevo usuario
       * @param usuario es una variable de tipo cadena de acaracteres

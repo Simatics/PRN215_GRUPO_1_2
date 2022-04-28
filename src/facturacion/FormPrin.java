@@ -1,6 +1,6 @@
 
 package facturacion;
-
+import Ventas.Vendedor;
 
 
 
@@ -14,7 +14,7 @@ public class FormPrin extends javax.swing.JFrame {
     
        
     public FormPrin() {
-        initComponents();
+       initComponents();
 
     }
 
@@ -27,27 +27,69 @@ public class FormPrin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
+        btnPago = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         pnBase = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         lblLetrero = new javax.swing.JLabel();
-        btnChili = new javax.swing.JButton();
         btnAmburguesa = new javax.swing.JButton();
         btnPizza = new javax.swing.JButton();
         btnNachos = new javax.swing.JButton();
         btnHotDog = new javax.swing.JButton();
         btnTacos = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txtPantalla = new javax.swing.JTextPane();
-        btnPago = new javax.swing.JButton();
-        btnFactura = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
+        btnMasHam = new javax.swing.JButton();
+        btnMenHam = new javax.swing.JButton();
+        txtDesHam = new javax.swing.JTextField();
+        txtCantidadHam = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        btnMenNa = new javax.swing.JButton();
+        btnMasNa = new javax.swing.JButton();
+        btnMenTa = new javax.swing.JButton();
+        btnMasHot = new javax.swing.JButton();
+        btnMenHot = new javax.swing.JButton();
+        btnMasPizz = new javax.swing.JButton();
+        btnMenPizz = new javax.swing.JButton();
+        btnMasTa = new javax.swing.JButton();
+        txtCantidadNa = new javax.swing.JTextField();
+        txtDesNa = new javax.swing.JTextField();
+        txtDesTa = new javax.swing.JTextField();
+        txtDesHot = new javax.swing.JTextField();
+        txtCantidadTa = new javax.swing.JTextField();
+        txtCantidadHot = new javax.swing.JTextField();
+        txtCantidadPizz = new javax.swing.JTextField();
+        txtDesPizz = new javax.swing.JTextField();
+        btnIrPago = new javax.swing.JButton();
+        btnDeleteNa = new javax.swing.JButton();
+        btnDeleteTa = new javax.swing.JButton();
+        btnDeleteHot = new javax.swing.JButton();
+        btnDeletePizz = new javax.swing.JButton();
+        btnDeleteHam = new javax.swing.JButton();
+        cmbTa = new javax.swing.JComboBox<>();
+        cmbHam = new javax.swing.JComboBox<>();
+        cmbNa = new javax.swing.JComboBox<>();
+        cmbHot = new javax.swing.JComboBox<>();
+        cmbPizz = new javax.swing.JComboBox<>();
+        btnLimpiar = new javax.swing.JButton();
+
+        jLabel2.setText("jLabel2");
+
+        btnPago.setBackground(new java.awt.Color(204, 0, 204));
+        btnPago.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnPago.setForeground(new java.awt.Color(255, 255, 255));
+        btnPago.setText("Pago");
+        btnPago.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPagoActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gordo´s Restaurant");
@@ -78,10 +120,6 @@ public class FormPrin extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        btnChili.setBackground(new java.awt.Color(255, 255, 255));
-        btnChili.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnChili.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/chili.jpg"))); // NOI18N
-
         btnAmburguesa.setBackground(new java.awt.Color(255, 255, 255));
         btnAmburguesa.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         btnAmburguesa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/amburguesa.png"))); // NOI18N
@@ -94,24 +132,41 @@ public class FormPrin extends javax.swing.JFrame {
         btnPizza.setBackground(new java.awt.Color(255, 255, 255));
         btnPizza.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         btnPizza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pizza.jpg"))); // NOI18N
+        btnPizza.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPizzaActionPerformed(evt);
+            }
+        });
 
         btnNachos.setBackground(new java.awt.Color(255, 255, 255));
         btnNachos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         btnNachos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/nachos.jpg"))); // NOI18N
+        btnNachos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNachosActionPerformed(evt);
+            }
+        });
 
         btnHotDog.setBackground(new java.awt.Color(255, 255, 255));
         btnHotDog.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         btnHotDog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/hotdog.jpg"))); // NOI18N
+        btnHotDog.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHotDogActionPerformed(evt);
+            }
+        });
 
         btnTacos.setBackground(new java.awt.Color(255, 255, 255));
         btnTacos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         btnTacos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/tacos.png"))); // NOI18N
+        btnTacos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTacosActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setText("Amburguesa $ 6.50");
-
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel2.setText("Chili   $ 7.00");
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel3.setText("Nachos  $ 3.00");
@@ -125,24 +180,8 @@ public class FormPrin extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel6.setText("Hot Dog $ 4.00");
 
-        jScrollPane2.setViewportView(txtPantalla);
-
-        btnPago.setBackground(new java.awt.Color(204, 0, 204));
-        btnPago.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnPago.setForeground(new java.awt.Color(255, 255, 255));
-        btnPago.setText("Pago");
-        btnPago.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPagoActionPerformed(evt);
-            }
-        });
-
-        btnFactura.setBackground(new java.awt.Color(0, 102, 102));
-        btnFactura.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnFactura.setText("Admin");
-
         btnSalir.setBackground(new java.awt.Color(204, 0, 51));
-        btnSalir.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnSalir.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(255, 255, 255));
         btnSalir.setText("Salir");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -151,89 +190,459 @@ public class FormPrin extends javax.swing.JFrame {
             }
         });
 
+        btnMasHam.setBackground(new java.awt.Color(204, 204, 255));
+        btnMasHam.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnMasHam.setText("+");
+        btnMasHam.setEnabled(false);
+        btnMasHam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMasHamActionPerformed(evt);
+            }
+        });
+
+        btnMenHam.setBackground(new java.awt.Color(204, 204, 255));
+        btnMenHam.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnMenHam.setText("-");
+        btnMenHam.setEnabled(false);
+        btnMenHam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenHamActionPerformed(evt);
+            }
+        });
+
+        txtDesHam.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtDesHam.setEnabled(false);
+
+        txtCantidadHam.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtCantidadHam.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtCantidadHam.setEnabled(false);
+
+        jLabel8.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        jLabel8.setText("Cantidad");
+
+        jLabel9.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        jLabel9.setText("Descripcion");
+
+        btnMenNa.setBackground(new java.awt.Color(204, 204, 255));
+        btnMenNa.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnMenNa.setText("-");
+        btnMenNa.setEnabled(false);
+        btnMenNa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenNaActionPerformed(evt);
+            }
+        });
+
+        btnMasNa.setBackground(new java.awt.Color(204, 204, 255));
+        btnMasNa.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnMasNa.setText("+");
+        btnMasNa.setEnabled(false);
+        btnMasNa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMasNaActionPerformed(evt);
+            }
+        });
+
+        btnMenTa.setBackground(new java.awt.Color(204, 204, 255));
+        btnMenTa.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnMenTa.setText("-");
+        btnMenTa.setEnabled(false);
+        btnMenTa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenTaActionPerformed(evt);
+            }
+        });
+
+        btnMasHot.setBackground(new java.awt.Color(204, 204, 255));
+        btnMasHot.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnMasHot.setText("+");
+        btnMasHot.setEnabled(false);
+        btnMasHot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMasHotActionPerformed(evt);
+            }
+        });
+
+        btnMenHot.setBackground(new java.awt.Color(204, 204, 255));
+        btnMenHot.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnMenHot.setText("-");
+        btnMenHot.setEnabled(false);
+        btnMenHot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenHotActionPerformed(evt);
+            }
+        });
+
+        btnMasPizz.setBackground(new java.awt.Color(204, 204, 255));
+        btnMasPizz.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnMasPizz.setText("+");
+        btnMasPizz.setEnabled(false);
+        btnMasPizz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMasPizzActionPerformed(evt);
+            }
+        });
+
+        btnMenPizz.setBackground(new java.awt.Color(204, 204, 255));
+        btnMenPizz.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnMenPizz.setText("-");
+        btnMenPizz.setEnabled(false);
+        btnMenPizz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenPizzActionPerformed(evt);
+            }
+        });
+
+        btnMasTa.setBackground(new java.awt.Color(204, 204, 255));
+        btnMasTa.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnMasTa.setText("+");
+        btnMasTa.setEnabled(false);
+        btnMasTa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMasTaActionPerformed(evt);
+            }
+        });
+
+        txtCantidadNa.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtCantidadNa.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtCantidadNa.setEnabled(false);
+
+        txtDesNa.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtDesNa.setEnabled(false);
+
+        txtDesTa.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtDesTa.setEnabled(false);
+
+        txtDesHot.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtDesHot.setEnabled(false);
+
+        txtCantidadTa.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtCantidadTa.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtCantidadTa.setEnabled(false);
+
+        txtCantidadHot.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtCantidadHot.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtCantidadHot.setEnabled(false);
+
+        txtCantidadPizz.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtCantidadPizz.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtCantidadPizz.setEnabled(false);
+
+        txtDesPizz.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtDesPizz.setEnabled(false);
+
+        btnIrPago.setBackground(new java.awt.Color(0, 102, 102));
+        btnIrPago.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        btnIrPago.setForeground(new java.awt.Color(255, 255, 255));
+        btnIrPago.setText("Pago");
+        btnIrPago.setEnabled(false);
+        btnIrPago.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIrPagoActionPerformed(evt);
+            }
+        });
+
+        btnDeleteNa.setBackground(new java.awt.Color(255, 0, 51));
+        btnDeleteNa.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnDeleteNa.setText("X");
+        btnDeleteNa.setEnabled(false);
+        btnDeleteNa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteNaActionPerformed(evt);
+            }
+        });
+
+        btnDeleteTa.setBackground(new java.awt.Color(255, 0, 51));
+        btnDeleteTa.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnDeleteTa.setText("X");
+        btnDeleteTa.setEnabled(false);
+        btnDeleteTa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteTaActionPerformed(evt);
+            }
+        });
+
+        btnDeleteHot.setBackground(new java.awt.Color(255, 0, 51));
+        btnDeleteHot.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnDeleteHot.setText("X");
+        btnDeleteHot.setEnabled(false);
+        btnDeleteHot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteHotActionPerformed(evt);
+            }
+        });
+
+        btnDeletePizz.setBackground(new java.awt.Color(255, 0, 51));
+        btnDeletePizz.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnDeletePizz.setText("X");
+        btnDeletePizz.setEnabled(false);
+        btnDeletePizz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeletePizzActionPerformed(evt);
+            }
+        });
+
+        btnDeleteHam.setBackground(new java.awt.Color(255, 0, 51));
+        btnDeleteHam.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        btnDeleteHam.setText("X");
+        btnDeleteHam.setEnabled(false);
+        btnDeleteHam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteHamActionPerformed(evt);
+            }
+        });
+
+        cmbTa.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        cmbTa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pepsi lata", "Fanta lata", "Coca Lata", "Pepsi 1.5L" }));
+        cmbTa.setEnabled(false);
+        cmbTa.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cmbTaItemStateChanged(evt);
+            }
+        });
+
+        cmbHam.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        cmbHam.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pepsi lata", "Fanta lata", "Coca Lata", "Pepsi 1.5L" }));
+        cmbHam.setEnabled(false);
+        cmbHam.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cmbHamItemStateChanged(evt);
+            }
+        });
+
+        cmbNa.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        cmbNa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pepsi lata", "Fanta lata", "Coca Lata", "Pepsi 1.5L" }));
+        cmbNa.setEnabled(false);
+        cmbNa.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cmbNaItemStateChanged(evt);
+            }
+        });
+
+        cmbHot.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        cmbHot.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pepsi lata", "Fanta lata", "Coca Lata", "Pepsi 1.5L" }));
+        cmbHot.setEnabled(false);
+        cmbHot.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cmbHotItemStateChanged(evt);
+            }
+        });
+
+        cmbPizz.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        cmbPizz.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pepsi lata", "Fanta lata", "Coca Lata", "Pepsi 1.5L" }));
+        cmbPizz.setEnabled(false);
+        cmbPizz.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cmbPizzItemStateChanged(evt);
+            }
+        });
+
+        btnLimpiar.setBackground(new java.awt.Color(0, 102, 102));
+        btnLimpiar.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
+        btnLimpiar.setText("Eliminar Orden");
+        btnLimpiar.setEnabled(false);
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnBaseLayout = new javax.swing.GroupLayout(pnBase);
         pnBase.setLayout(pnBaseLayout);
         pnBaseLayout.setHorizontalGroup(
             pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(pnBaseLayout.createSequentialGroup()
-                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnBaseLayout.createSequentialGroup()
-                .addGap(57, 57, 57)
                 .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnNachos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnTacos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAmburguesa, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
                     .addGroup(pnBaseLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
                         .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnBaseLayout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addComponent(btnTacos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnNachos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnBaseLayout.createSequentialGroup()
+                                .addComponent(btnMasNa, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnMenNa, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtCantidadNa, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel5)
+                            .addGroup(pnBaseLayout.createSequentialGroup()
+                                .addComponent(btnMasTa, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnMenTa, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtCantidadTa, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel3)
-                            .addComponent(jLabel5))))
-                .addGap(41, 41, 41)
-                .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnPizza, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnChili, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnHotDog, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbTa, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbNa, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(pnBaseLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
+                        .addGap(29, 29, 29)
                         .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4))))
-                .addGap(59, 59, 59)
-                .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(pnBaseLayout.createSequentialGroup()
-                        .addComponent(jScrollPane2)
-                        .addGap(44, 44, 44))
-                    .addGroup(pnBaseLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(btnFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                        .addComponent(btnPago, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57))))
+                            .addGroup(pnBaseLayout.createSequentialGroup()
+                                .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnBaseLayout.createSequentialGroup()
+                                        .addComponent(btnHotDog, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel6)
+                                            .addGroup(pnBaseLayout.createSequentialGroup()
+                                                .addComponent(btnMasHot, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btnMenHot, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(txtCantidadHot, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(cmbHot, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(pnBaseLayout.createSequentialGroup()
+                                        .addComponent(btnPizza, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(pnBaseLayout.createSequentialGroup()
+                                                .addComponent(btnMasPizz, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btnMenPizz, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(12, 12, 12)
+                                                .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(txtCantidadPizz, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(cmbPizz, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel4))))
+                                .addGap(36, 36, 36)
+                                .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnBaseLayout.createSequentialGroup()
+                                        .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnIrPago, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(pnBaseLayout.createSequentialGroup()
+                                        .addComponent(txtDesPizz, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnDeletePizz, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(pnBaseLayout.createSequentialGroup()
+                                .addComponent(btnAmburguesa, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addGroup(pnBaseLayout.createSequentialGroup()
+                                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(pnBaseLayout.createSequentialGroup()
+                                                .addComponent(btnMasHam, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnMenHam, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(cmbHam, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtCantidadHam, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel8))
+                                        .addGap(30, 30, 30)
+                                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabel9)
+                                            .addComponent(txtDesHam, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+                                            .addComponent(txtDesHot)
+                                            .addComponent(txtDesTa)
+                                            .addComponent(txtDesNa))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(btnDeleteNa, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(btnDeleteTa, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(btnDeleteHot, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(btnDeleteHam, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
+                .addContainerGap(200, Short.MAX_VALUE))
         );
         pnBaseLayout.setVerticalGroup(
             pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnBaseLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4)
-                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
+                .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnAmburguesa)
+                    .addGroup(pnBaseLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnBaseLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel8))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(pnBaseLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cmbHam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnMasHam, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnMenHam, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCantidadHam, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDesHam, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDeleteHam, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnNachos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnBaseLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(5, 5, 5)
+                        .addComponent(cmbNa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnMasNa, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnMenNa, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCantidadNa, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDesNa, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDeleteNa, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
                 .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnBaseLayout.createSequentialGroup()
-                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnAmburguesa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnChili, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel5)
+                        .addGap(4, 4, 4)
+                        .addComponent(cmbTa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1))
-                        .addGap(30, 30, 30)
-                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnNachos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPizza, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addGap(33, 33, 33)
-                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnHotDog, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnTacos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6))
-                        .addGap(16, 84, Short.MAX_VALUE))
+                            .addComponent(btnMasTa, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnMenTa, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCantidadTa, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDesTa, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDeleteTa, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btnTacos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnBaseLayout.createSequentialGroup()
-                        .addComponent(jScrollPane2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6)
+                        .addGap(5, 5, 5)
+                        .addComponent(cmbHot, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPago, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(38, 38, 38))))
+                            .addComponent(btnMasHot, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnMenHot, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCantidadHot, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDesHot, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDeleteHot, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btnHotDog, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnBaseLayout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cmbPizz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnMasPizz, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnMenPizz, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCantidadPizz, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDesPizz, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDeletePizz, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btnPizza, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnBaseLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(pnBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnIrPago, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnBaseLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(190, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(pnBase);
@@ -242,11 +651,14 @@ public class FormPrin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 885, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1165, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 884, Short.MAX_VALUE)
         );
 
         pack();
@@ -254,8 +666,16 @@ public class FormPrin extends javax.swing.JFrame {
 
     // Codigo para el boton amburgueza
     private void btnAmburguesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAmburguesaActionPerformed
-     txtPantalla.setText("Combo de amburguesa, papa y pepsi 12 onz.......... $6.50");
-     
+    txtCantidadHam.setEnabled(true);
+    txtDesHam.setEnabled(true);
+    btnMasHam.setEnabled(true);
+    btnMenHam.setEnabled(true);
+    btnDeleteHam.setEnabled(true);
+    cmbHam.setEnabled(true);
+    btnLimpiar.setEnabled(true);
+    btnIrPago.setEnabled(true);
+    txtCantidadHam.setText("1");
+    txtDesHam.setText(" Hamburguesa + 1 papa + " + (String) cmbHam.getSelectedItem());
     }//GEN-LAST:event_btnAmburguesaActionPerformed
     // Codigo para cerrar la aplicasion 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
@@ -263,33 +683,360 @@ public class FormPrin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirActionPerformed
     // codigo para el boton pago
     private void btnPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPagoActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_btnPagoActionPerformed
 
-   
+    private void btnPizzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPizzaActionPerformed
+      txtCantidadPizz.setEnabled(true);
+      txtDesPizz.setEnabled(true);
+      btnMasPizz.setEnabled(true);
+      btnMenPizz.setEnabled(true);
+      btnDeletePizz.setEnabled(true);
+      cmbPizz.setEnabled(true);
+      btnLimpiar.setEnabled(true);
+      btnIrPago.setEnabled(true);
+      txtCantidadPizz.setText("1");
+      txtDesPizz.setText(" Pizza grande peperoni + palicrunsh + " + (String) cmbPizz.getSelectedItem());
+    }//GEN-LAST:event_btnPizzaActionPerformed
+    
+    
+    
+    // Este boton aumenta en 1 el valor del cuadro de texto de cantidad amburguesa
+    private void btnMasHamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasHamActionPerformed
+        int contador;
+        contador= Integer.parseInt(txtCantidadHam.getText());
+        contador+=1;
+        txtCantidadHam.setText(""+ contador);
+    }//GEN-LAST:event_btnMasHamActionPerformed
+    
+    // Este boton aumenta en 1 el valor del cuadro de texto de cantidad nachos
+    private void btnMasNaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasNaActionPerformed
+        int contador;
+        contador= Integer.parseInt(txtCantidadNa.getText());
+        contador+=1;
+        txtCantidadNa.setText(""+ contador);
+    }//GEN-LAST:event_btnMasNaActionPerformed
+    
+    // Este boton aumenta en 1 el valor del cuadro de texto de antidad tacos
+    private void btnMasTaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasTaActionPerformed
+       int contador;
+        contador= Integer.parseInt(txtCantidadTa.getText());
+        contador+=1;
+        txtCantidadTa.setText(""+ contador);
+    }//GEN-LAST:event_btnMasTaActionPerformed
+    
+    // Este boton aumenta en 1 el valor del cuadro de texto de cantidad tacos
+    private void btnMasHotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasHotActionPerformed
+        int contador;
+        contador= Integer.parseInt(txtCantidadHot.getText());
+        contador+=1;
+        txtCantidadHot.setText(""+ contador);
+    }//GEN-LAST:event_btnMasHotActionPerformed
+    
+    // Este boton aumenta en 1 el valor del cuadro de texto de cantidad pizza
+    private void btnMasPizzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasPizzActionPerformed
+        int contador;
+        contador= Integer.parseInt(txtCantidadPizz.getText());
+        contador+=1;
+        txtCantidadPizz.setText(""+ contador);
+    }//GEN-LAST:event_btnMasPizzActionPerformed
+    
+     // Codigo para el boton nachos
+    private void btnNachosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNachosActionPerformed
+      txtCantidadNa.setEnabled(true);
+      txtDesNa.setEnabled(true);
+      btnMasNa.setEnabled(true);
+      btnMenNa.setEnabled(true);
+      btnDeleteNa.setEnabled(true);
+      cmbNa.setEnabled(true);
+      btnLimpiar.setEnabled(true);
+      btnIrPago.setEnabled(true);
+      txtCantidadNa.setText("1");
+      txtDesNa.setText(" Orden nachos + " + (String)cmbNa.getSelectedItem() );
+    }//GEN-LAST:event_btnNachosActionPerformed
+    
+     // Codigo para el boton tacos
+    private void btnTacosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTacosActionPerformed
+      txtCantidadTa.setEnabled(true);
+      txtDesTa.setEnabled(true);
+      btnMasTa.setEnabled(true);
+      btnMenTa.setEnabled(true);
+      btnDeleteTa.setEnabled(true);
+      cmbTa.setEnabled(true);
+      btnLimpiar.setEnabled(true);
+      btnIrPago.setEnabled(true);
+      txtCantidadTa.setText("1");
+      txtDesTa.setText(" Orden de 4 tacos de res + " + (String) cmbTa.getSelectedItem());
+    }//GEN-LAST:event_btnTacosActionPerformed
+    
+     // Codigo para el boton hot dog
+    private void btnHotDogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHotDogActionPerformed
+      txtCantidadHot.setEnabled(true);
+      txtDesHot.setEnabled(true);
+      btnMasHot.setEnabled(true);
+      btnMenHot.setEnabled(true);
+      btnDeleteHot.setEnabled(true);
+      cmbHot.setEnabled(true);
+      btnLimpiar.setEnabled(true);
+      btnIrPago.setEnabled(true);
+      txtCantidadHot.setText("1");
+      txtDesHot.setText(" Hot dog + " + (String) cmbHot.getSelectedItem());
+    }//GEN-LAST:event_btnHotDogActionPerformed
+
+    // Este  metodo reacciona al evento de sellecionar otro item de cmbham
+    private void cmbHamItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbHamItemStateChanged
+        txtDesHam.setText(" Hamburguesa + 1 papa + " + (String) cmbHam.getSelectedItem());
+    }//GEN-LAST:event_cmbHamItemStateChanged
+    
+    // Este  metodo reacciona al evento de sellecionar otro item de cmbNa
+    private void cmbNaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbNaItemStateChanged
+        txtDesNa.setText(" Orden nachos + " + (String) cmbNa.getSelectedItem());
+    }//GEN-LAST:event_cmbNaItemStateChanged
+
+    private void cmbHotItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbHotItemStateChanged
+       txtDesHot.setText(" Hot dog + " + (String) cmbHot.getSelectedItem());
+    }//GEN-LAST:event_cmbHotItemStateChanged
+
+    private void cmbTaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbTaItemStateChanged
+       txtDesTa.setText(" Orden de 4 tacos de res + " + (String) cmbTa.getSelectedItem());
+    }//GEN-LAST:event_cmbTaItemStateChanged
+
+    private void cmbPizzItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbPizzItemStateChanged
+        txtDesPizz.setText(" Pizza grande peperoni + palicrunsh + " + (String) cmbPizz.getSelectedItem());
+    }//GEN-LAST:event_cmbPizzItemStateChanged
+    
+    //Codigo del boton btnMenHam
+    private void btnMenHamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenHamActionPerformed
+        int contador;
+        contador= Integer.parseInt(txtCantidadHam.getText());
+        if(contador > 1)
+        {contador-=1;
+        txtCantidadHam.setText(""+ contador);
+        }
+        
+    }//GEN-LAST:event_btnMenHamActionPerformed
+    //Codigo del boton btnMenNa
+    private void btnMenNaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenNaActionPerformed
+        int contador;
+        contador= Integer.parseInt(txtCantidadNa.getText());
+        if(contador > 1)
+        {contador-=1;
+        txtCantidadNa.setText(""+ contador);
+        }
+    }//GEN-LAST:event_btnMenNaActionPerformed
+
+    //Codigo del boton btnMenTa
+    private void btnMenTaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenTaActionPerformed
+        int contador;
+        contador= Integer.parseInt(txtCantidadTa.getText());
+        if(contador > 1)
+        {contador-=1;
+        txtCantidadTa.setText(""+ contador);
+        }
+    }//GEN-LAST:event_btnMenTaActionPerformed
+
+    //Codigo del boton btnMenHot
+    private void btnMenHotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenHotActionPerformed
+        int contador;
+        contador= Integer.parseInt(txtCantidadHot.getText());
+        if(contador > 1)
+        {contador-=1;
+        txtCantidadHot.setText(""+ contador);
+        }
+    }//GEN-LAST:event_btnMenHotActionPerformed
+
+    //Codigo del boton btnMenPizz
+    private void btnMenPizzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenPizzActionPerformed
+        int contador;
+        contador= Integer.parseInt(txtCantidadPizz.getText());
+        if(contador > 1)
+        {contador-=1;
+        txtCantidadPizz.setText(""+ contador);
+        }
+    }//GEN-LAST:event_btnMenPizzActionPerformed
+
+    // Codigo para los botones eliminar combos
+    private void btnDeleteHamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteHamActionPerformed
+        txtCantidadHam.setText("");
+        txtDesHam.setText("");
+        txtCantidadHam.setEnabled(false);
+        txtDesHam.setEnabled(false);
+        btnMasHam.setEnabled(false);
+        btnMenHam.setEnabled(false);
+        btnDeleteHam.setEnabled(false);
+        cmbHam.setEnabled(false);
+        btnLimpiar.setEnabled(false);
+        btnIrPago.setEnabled(false);
+        
+    }//GEN-LAST:event_btnDeleteHamActionPerformed
+
+    private void btnDeleteNaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteNaActionPerformed
+        txtCantidadNa.setText("");
+        txtDesNa.setText("");
+        txtCantidadNa.setEnabled(false);
+        txtDesNa.setEnabled(false);
+        btnMasNa.setEnabled(false);
+        btnMenNa.setEnabled(false);
+        btnDeleteNa.setEnabled(false);
+        cmbNa.setEnabled(false);
+        btnLimpiar.setEnabled(false);
+        btnIrPago.setEnabled(false);
+    }//GEN-LAST:event_btnDeleteNaActionPerformed
+
+    private void btnDeleteTaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteTaActionPerformed
+        txtCantidadTa.setText("");
+        txtDesTa.setText("");
+        txtCantidadTa.setEnabled(false);
+        txtDesTa.setEnabled(false);
+        btnMasTa.setEnabled(false);
+        btnMenTa.setEnabled(false);
+        btnDeleteTa.setEnabled(false);
+        cmbNa.setEnabled(false);
+        btnLimpiar.setEnabled(false);
+        btnIrPago.setEnabled(false);
+    }//GEN-LAST:event_btnDeleteTaActionPerformed
+
+    private void btnDeleteHotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteHotActionPerformed
+       txtCantidadHot.setText("");
+       txtDesHot.setText("");
+       txtCantidadHot.setEnabled(false);
+       txtDesHot.setEnabled(false);
+       btnMasHot.setEnabled(false);
+       btnMenHot.setEnabled(false);
+       btnDeleteHot.setEnabled(false);
+       cmbHot.setEnabled(false);
+       btnLimpiar.setEnabled(false);
+       btnIrPago.setEnabled(false);
+    }//GEN-LAST:event_btnDeleteHotActionPerformed
+
+    private void btnDeletePizzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletePizzActionPerformed
+        txtCantidadPizz.setText("");
+        txtDesPizz.setText("");
+        txtCantidadPizz.setEnabled(false);
+        txtDesPizz.setEnabled(false);
+        btnMasPizz.setEnabled(false);
+        btnMenPizz.setEnabled(false);
+        btnDeletePizz.setEnabled(false);
+        cmbPizz.setEnabled(false);
+        btnLimpiar.setEnabled(false);
+        btnIrPago.setEnabled(false);
+    }//GEN-LAST:event_btnDeletePizzActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+
+       txtCantidadHam.setText("");
+       txtCantidadNa.setText("");
+       txtCantidadTa.setText("");
+       txtCantidadHot.setText("");
+       txtCantidadPizz.setText("");
+       
+       txtDesHam.setText("");
+       txtDesNa.setText("");
+       txtDesTa.setText("");
+       txtDesHot.setText("");
+       txtDesPizz.setText("");
+       btnLimpiar.setEnabled(false);
+       btnIrPago.setEnabled(false);
+       
+       txtCantidadHam.setEnabled(false);
+       txtDesHam.setEnabled(false);
+       btnMasHam.setEnabled(false);
+       btnMenHam.setEnabled(false);
+       btnDeleteHam.setEnabled(false);
+       cmbHam.setEnabled(false);
+       
+       txtCantidadNa.setEnabled(false);
+       txtDesNa.setEnabled(false);
+       btnMasNa.setEnabled(false);
+       btnMenNa.setEnabled(false);
+       btnDeleteNa.setEnabled(false);
+       cmbNa.setEnabled(false);
+       
+       txtCantidadTa.setEnabled(false);
+       txtDesTa.setEnabled(false);
+       btnMasTa.setEnabled(false);
+       btnMenTa.setEnabled(false);
+       btnDeleteTa.setEnabled(false);
+       cmbNa.setEnabled(false);
+       
+       txtCantidadHot.setEnabled(false);
+       txtDesHot.setEnabled(false);
+       btnMasHot.setEnabled(false);
+       btnMenHot.setEnabled(false);
+       btnDeleteHot.setEnabled(false);
+       cmbHot.setEnabled(false);
+       
+       txtCantidadPizz.setText("");
+       txtDesPizz.setText("");
+       txtCantidadPizz.setEnabled(false);
+       txtDesPizz.setEnabled(false);
+       btnMasPizz.setEnabled(false);
+       btnMenPizz.setEnabled(false);
+       btnDeletePizz.setEnabled(false);
+       cmbPizz.setEnabled(false);
+       
+    }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnIrPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIrPagoActionPerformed
+       FormPago recibo= new FormPago();
+       recibo.setVisible(true);
+       this.setVisible(false);
+    }//GEN-LAST:event_btnIrPagoActionPerformed
+
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAmburguesa;
-    private javax.swing.JButton btnChili;
-    private javax.swing.JButton btnFactura;
+    private javax.swing.JButton btnDeleteHam;
+    private javax.swing.JButton btnDeleteHot;
+    private javax.swing.JButton btnDeleteNa;
+    private javax.swing.JButton btnDeletePizz;
+    private javax.swing.JButton btnDeleteTa;
     private javax.swing.JButton btnHotDog;
+    private javax.swing.JButton btnIrPago;
+    private javax.swing.JButton btnLimpiar;
+    private javax.swing.JButton btnMasHam;
+    private javax.swing.JButton btnMasHot;
+    private javax.swing.JButton btnMasNa;
+    private javax.swing.JButton btnMasPizz;
+    private javax.swing.JButton btnMasTa;
+    private javax.swing.JButton btnMenHam;
+    private javax.swing.JButton btnMenHot;
+    private javax.swing.JButton btnMenNa;
+    private javax.swing.JButton btnMenPizz;
+    private javax.swing.JButton btnMenTa;
     private javax.swing.JButton btnNachos;
     private javax.swing.JButton btnPago;
     private javax.swing.JButton btnPizza;
     private javax.swing.JButton btnSalir;
     private javax.swing.JButton btnTacos;
+    private javax.swing.JComboBox<String> cmbHam;
+    private javax.swing.JComboBox<String> cmbHot;
+    private javax.swing.JComboBox<String> cmbNa;
+    private javax.swing.JComboBox<String> cmbPizz;
+    private javax.swing.JComboBox<String> cmbTa;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblLetrero;
     private javax.swing.JPanel pnBase;
-    private javax.swing.JTextPane txtPantalla;
+    private javax.swing.JTextField txtCantidadHam;
+    private javax.swing.JTextField txtCantidadHot;
+    private javax.swing.JTextField txtCantidadNa;
+    private javax.swing.JTextField txtCantidadPizz;
+    private javax.swing.JTextField txtCantidadTa;
+    private javax.swing.JTextField txtDesHam;
+    private javax.swing.JTextField txtDesHot;
+    private javax.swing.JTextField txtDesNa;
+    private javax.swing.JTextField txtDesPizz;
+    private javax.swing.JTextField txtDesTa;
     // End of variables declaration//GEN-END:variables
 }
