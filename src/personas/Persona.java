@@ -17,10 +17,9 @@ public class Persona {
     public Persona()
     {
     }
-    private int dui;
-    private String nombre;
-    private char Correo;
-    private int telefono;
+    protected int dui;
+    protected String nombre;
+    protected String direccion;
 
 
     public int getDui() {
@@ -41,23 +40,14 @@ public class Persona {
         this.nombre = nombre;
     }
 
-
-    public char getCorreo() {
-        return Correo;
-    }
-
-    public void setCorreo(char Correo) {
-        this.Correo = Correo;
+    
+    public String getDireccion() {
+        return direccion;
     }
 
 
-    public int getTelefono() {
-        return telefono;
-    }
-
-
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
     
     

@@ -5,15 +5,29 @@ package personas;
  *
  * @author Pedro Ernesto Alfaro Laínez
  */
+
+/*
+  clase vendedor
+*/
 public class Vendedor extends Persona {
     
     // Declaracion de los campos de la clase
     private String idVendedor;
     private String tipoPago;
-    private int idVenta;
+
     
     public Vendedor()
     {}
+    
+
+    public Vendedor( String idVendedor, String nombre, String direccion )
+    {
+
+      this.idVendedor=idVendedor;
+      this.nombre=nombre;
+      this.direccion=direccion;
+    
+    }
 
     
     public String getIdVendedor() {
@@ -34,13 +48,7 @@ public class Vendedor extends Persona {
         this.tipoPago = tipoPago;
     }
 
-    public void setIdVenta(int idVenta) {
-        this.idVenta = idVenta;
-    }
-        
-    public int getIdVenta() {
-        return idVenta;
-    }
+
     
 
     

@@ -1,8 +1,10 @@
 
 
 package Ventas;
+import java.time.LocalDate;
+import java.time.LocalTime;
 // Esta clase es para generar la fecha y hora 
-import java.util.Date;
+
 
 /**
  *
@@ -12,20 +14,25 @@ public class Orden {
     
     // Declaracion de los campos de clase
     private int idOrden;
-    private String hora;
-    private String fecha;
+    private LocalTime hora;
+    private LocalDate fecha;
     private String [] combos;
     private int [] Cantidad;
     
     public Orden ()
     {}
     
-    public Orden(int idOrden,String hora, String fecha)
+    public Orden(int idOrden, LocalTime hora, LocalDate fecha, String [] combos, int [] cantidad)
     {
+      
+      
       this.idOrden=idOrden;
       this.fecha=fecha;
       this.hora=hora;
+      this.combos=combos;
+      this.Cantidad=cantidad;
     }
+    
     
     // Campos de clase encapsulados
 
@@ -38,24 +45,24 @@ public class Orden {
     }
 
 
-    public String getHora() {
+    public LocalTime getHora() {
         return hora;
     }
 
 
-    public void setHora(String hora) {
+    public void setHora(LocalTime hora) {
         this.hora = hora;
     }
 
     /**
      * @return the fecha
      */
-    public String getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
 
-    public void setFecha(String fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 

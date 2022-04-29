@@ -1,6 +1,5 @@
 
 package facturacion;
-import Ventas.Vendedor;
 
 
 
